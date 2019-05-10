@@ -6,6 +6,7 @@ There is an increase of the disease for the past decades and this increase is be
 ![img](img/global_t2d.png)
 [RNA-sequencing](https://en.wikipedia.org/wiki/RNA-Seq) uses next-generation sequencing [NGS](https://en.wikipedia.org/wiki/Massive_parallel_sequencing) to reveal the presence and quantity of RNA in a biological sample at a given moment. Expression is quantified to study cellular changes in response to external stimuli, differences between healthy and diseased states, and other research questions.  
 
+### Why  
 I've been study aging related disease such as cancer, so using Machine learning and genomics data to predict disease thus to get insight of molecular mechanism if of particular interest:  
 1.signature genes that predict the disease may function as biomarkers to guide diagnosis in precision medicine  
 2.such genes may also help to explain underlying molecular mechanism of disease  
