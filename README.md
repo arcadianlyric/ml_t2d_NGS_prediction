@@ -1,4 +1,5 @@
 ## Predict Type2 diabetes with islet single cell NGS data
+using supervised and unsupervised Machine learning methods to predict Type 2 diabetes with expression profile.   
 
 ### Introduction
 [Type2 diabetes](https://en.wikipedia.org/wiki/Diabetes_mellitus_type_2), an aging related disease, is a long-term metabolic disorder that is characterized by high blood sugar, insulin resistance, and relative lack of insulin.  
