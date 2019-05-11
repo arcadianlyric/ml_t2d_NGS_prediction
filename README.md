@@ -27,7 +27,7 @@ A public data set from [GEO](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=
 1.Trained ensemble models of SVM, RandomForest, XGB and Keras, result in a average corss validation accuracy of 0.88 and AUC > 0.95, which is not bad for biological data with limited samples  
 2.Diverse model ensemble with diverse models only slightly improved accuracy, perhaps because different models all picked same strong predictors hence adding different modele together did not improve performance  
 3.Neural network is not a best perfomer in this case, perhaps more training data are needed  
-4.Top important genes enriched in metabolic pathways (Metabolic pathways, Pyruvate metabolism etc.), the signature genes seem to be more as results of the disease, not causal ones.  
+4.Top important genes enriched in metabolic pathways (Metabolic pathways, Oxidative phosphorylation etc.), the signature genes seem to be more as results of the disease, not causal ones.  
 ![img](img/david_pathway.png)
 
 ### Tech stack

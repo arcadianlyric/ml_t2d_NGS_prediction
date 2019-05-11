@@ -1,6 +1,5 @@
 ### islets EDA
 
-setwd('/ds/ML/aging/islet/results')
 savehistory('islet-all.Rhistory')
 savehistory('islet.Rhistory')
 file.append('islet-all.Rhistory', 'islet.Rhistory')
@@ -11,6 +10,8 @@ library(mclust)
 #### preprocess ####
 ## read exp rpkm data
 df <- read.delim('../data/GSE81608_human_islets_rpkm.txt', header = T, stringsAsFactors = F)
+rownames(df) <- df$gene.id
+
 data <- df[,-1]
 ## read sample annotation
 info <- read.delim('../data/GSE81608_series_matrix.txt', skip=28, stringsAsFactors = F)
@@ -80,15 +81,3 @@ alpha.top500 <- alpha.high.log[alpha.top500.label,]
 for.ml <- t(rbind(alpha.t2d, alpha.top500))
 colnames(for.ml)[1]='t2d'
 write.csv(for.ml, file='alphaCell-top500pcaGene.csv', quote=F, row.names = F)
-
-#### wilcoxon top 500 genes
-pvals <- apply(alpha.high,1,function(x) {wilcox.test(x[1:377],x[378:length(alpha.high)])$p.value})
-## FDR 
-fdr <- p.adjust(pvals, method='fdr')
-alpha.wilcox.label <- as.numeric(names(fdr[order(fdr,decreasing = F)]))[1:500]
-alpha.wilcox <- alpha.high.log[ rownames(alpha.high.log) %in% alpha.wilcox.label,]
-#library(magrittr)
-tmp <- t(rbind(alpha.t2d, alpha.wilcox)) 
-colnames(tmp)[1]='t2d'
-write.csv(tmp, file='alphaCell-top500wilcoxGene.csv', quote=F, row.names = F)
-
