@@ -17,9 +17,11 @@ I've been study aging related disease such as cancer, so using Machine learning 
 #### Data
 A public data set from [GEO](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE81608), with ~1,600 single islet cell RNA-sequencing on people with and without Type2 diabetes.
 #### Methods  
-1. EDA with R, t-SNE outperform PCA on separating cells of different origin (alpha, beta cells etc.)  
+1. EDA  
+t-SNE outperform PCA on separating cells of different origin (alpha, beta cells etc.)  
 ![img](img/tsne-pca-t2d-cellType.png)
-2. Due to the high dimensionality of genes (~30,000), I extracted top 500 feature genes with high PCA loading for model training.  
+2. Demesion reduction with PCA  
+Due to the high dimensionality of genes (~30,000), I extracted top 500 feature genes with high PCA loading for model training.  
 3. Trained ensemble models of SVM, RandomForest, XGB and Keras  
 4. Search best parameters with GridSearchCV  
 5. Use genes with top significance from RF as disease biomarker, perform gene set enrichment analysis   
