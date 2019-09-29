@@ -20,7 +20,7 @@ A public data set from [GEO](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=
 1. EDA  
 t-SNE outperform PCA on separating cells of different origin (alpha, beta cells etc.)  
 ![img](img/tsne-pca-t2d-cellType.png)
-2. Demesion reduction with PCA  
+2. Dimension reduction with PCA  
 Due to the high dimensionality of genes (~30,000), I extracted top 500 feature genes with high PCA loading for model training.  
 3. Trained ensemble models of SVM, RandomForest, XGB and Keras  
 4. Search best parameters with GridSearchCV  
